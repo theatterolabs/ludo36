@@ -1,0 +1,65 @@
+@font-face {
+  font-family: signpainter;
+  src: url('SIGNPAINTER.TTF');
+}
+
+body { 
+  background-color: black;
+   padding: 0; 
+  margin: 0; 
+}
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { position: fixed; width: 100%; height: 100%; top:0px; left:0px; }
+
+#unity-canvas { 
+  background: url('loading_bg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { 
+  position: absolute; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%); 
+  display: none; 
+}
+
+#unity-logo { 
+    width: 82vw;
+    height: 35vh;
+    background: url(unity-logo-dark.png) no-repeat center;
+    background-size: contain;
+    position: relative;
+  
+}
+
+#unity-progress-bar-empty { 
+    width: 73vw;
+    height: 7.6vh;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#unity-progress-bar-empty  span { 
+    font-family: signpainter;
+    display: block;
+    width: 73vw;
+    height: 7.6vh;
+    font-size: large;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+  
+}
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
